@@ -29,7 +29,7 @@ function onMove(event) {
       x = min;   
     }
    else if(x > max) { 
-      x = max-2; 
+      x = max-10; 
     }
     drag.style.left = x + 'px';
     left.style.width = x + 'px';

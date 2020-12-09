@@ -10,15 +10,23 @@ body {
 
 /*drag-reveal-styles*/
 
+#outerShellCon {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
 #outerShell {
-    width: 900px;
-    margin: auto;
+    width: 60%;
+    margin: 0 auto;
   }
   
   #imageCon {
     position: relative;
     width: 900px;
-    height: 546px;
+    height: 690px;
   }
 
   .slideImage {
@@ -65,7 +73,31 @@ body {
     font-family: 'Iceberg', cursive;
     color: #9ACD32;
     font-size: 50px;
-    padding: 5%;
+    padding-top: 5%;
+    padding-left: 5%;
+}
+
+.sub-heading {
+    padding-top: 2%;
+    padding-left: 5%;
+    color: #242424;
+    font-size: 30px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+}
+
+.info-text {
+    padding-top: 2%;
+    padding-left: 5%;
+    color: #242424;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+#imposterText {
+    color: #242424;
+    font-size: 24px;
 }
 
 /*index.html*/
@@ -105,19 +137,18 @@ body {
 }
 
 
-
 /*game con*/
 
 #gameCon {
     width: 100vw;
     height: 100vh;
-    background-color: #242424;
+    background-color: #ECECEC;
     display: flex;
     justify-content: center;
 }
 
 #gameColumn {
-    width: 80%;
+    width: 90%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -129,7 +160,7 @@ body {
     font-family: 'Iceberg', cursive;
     color: #9ACD32;
     font-size: 45px;
-    margin-top: 10%;
+    margin-top: 7%;
 }
 
 #bugGameGallery {
@@ -141,11 +172,47 @@ body {
 }
 
 
-.bugGamePNG img {
-    width: 100%;
+.bugGamePNG {
+    width: 30%;
     margin: 0 auto;
 }
 
+#gameWrong {
+    position: absolute;
+    bottom: 12%;
+    display: none;
+    width: 18%;
+    height: 12%;
+    color: white;
+    background-color:#242424;
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+}
+
+#gameRight {
+    position: absolute;
+    bottom: 12%;
+    display: none;
+    width: 18%;
+    height: 12%;
+    color: white;
+    background-color:#242424;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    text-align: center;
+}
+
+#continueBtn {
+    background-color: #9ACD32;
+    text-align: center;
+    width: 50%;
+    padding: 7px;
+    margin: 0 auto;
+}
+
+#continueBtn p {
+    text-decoration: none;
+}
 
 /*main.html*/
 
@@ -192,18 +259,68 @@ body {
     background-color: #ECECEC;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 #section1 {
     width: 100%;
     height: 100vh;
     background-color: #ECECEC;
+    position: relative;
 }
+
+#s1-info {
+    width: 35%;
+}
+
+#gltfmodel {
+    position: absolute;
+    width: 50%;
+    height: 500px;
+    right: 0%;
+    top: 20%;
+}
+
 
 #section2 {
     width: 100%;
     height: 100vh;
     background-color: #ECECEC;
+    position: relative;
+}
+
+.xraylabel-font {
+    color: #242424;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+}
+
+#xraylabel1 {
+    margin-left: 5%;
+    margin-top: 20vh;
+    position: absolute;
+    width: 21%;
+    border-bottom: 2px solid black;
+    z-index: 1;
+}
+
+#xraylabel2 {
+    margin-left: 5%;
+    margin-top: 22%;
+    position: absolute;
+    width: 35%;
+    border-bottom: 2px solid black;
+    z-index: 1;
+}
+
+#xraylabel1 {
+
+}
+
+#xraylabel1 {
+
 }
 
 #section3 {
@@ -215,8 +332,16 @@ body {
 #section4 {
     width: 100%;
     height: 100vh;
+    position: relative;
 }
 
-#usdzmodel img {
-    width: 50%;
+#mapid { height:75%; 
+        width: 60%; 
+        background:beige; 
+        margin-lefT: 40%;}
+
+#googleChart {
+    height: 50%;
+    position: absolute;
+    right: 0%;
 }
