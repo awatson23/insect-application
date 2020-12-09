@@ -7,6 +7,9 @@ body {
     display: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
 /*drag-reveal-styles*/
 
@@ -36,11 +39,11 @@ body {
   }
   
   .image-right {
-    background: url(../images/xray2.jpg) no-repeat;
+    background: url(../images/xray3.jpg) no-repeat;
   }
   
   .image-left {
-    background: url(../images/xray1.jpg) no-repeat;
+    background: url(../images/xray4.jpg) no-repeat;
     width: 50%;
   }
   
@@ -49,6 +52,7 @@ body {
     left: 50%; 
     width: 10px; 
     cursor: pointer;
+    position: relative;
   }
   
   
@@ -73,7 +77,7 @@ body {
     font-family: 'Iceberg', cursive;
     color: #9ACD32;
     font-size: 50px;
-    padding-top: 5%;
+    padding-top: 2%;
     padding-left: 5%;
 }
 
@@ -90,14 +94,26 @@ body {
     padding-top: 2%;
     padding-left: 5%;
     color: #242424;
-    font-size: 20px;
+    font-size: 1.3vw;
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
+    line-height: 3vh;
 }
 
 #imposterText {
     color: #242424;
     font-size: 24px;
+}
+
+#dragThis {
+    transform: rotate(-90deg);
+    color: #242424;
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
+    position: absolute;
+    top: -7%;
+    font-weighT: bold;
+    
 }
 
 /*index.html*/
@@ -127,6 +143,12 @@ body {
 #begin-button {
     width: 15%;
     margin: 0 auto;
+    padding: 2%;
+}
+
+#begin-button:hover {
+    scale: 1.1;
+    transition-duration: 1.5s;
 }
 
 #separator {
@@ -173,7 +195,7 @@ body {
 
 
 .bugGamePNG {
-    width: 30%;
+    width: 33%;
     margin: 0 auto;
 }
 
@@ -247,11 +269,12 @@ body {
     height: 18%;
     margin: 0 auto;    
     text-align: center;
+    position: relative;
 }
 
 .menuIcon img {
-    width: 65px;
-    margin-top: 18%;
+    height: 5.5vh;
+    margin-top: 4vh;
 }
 
 #contentContainer {
@@ -273,6 +296,7 @@ body {
 #s1-info {
     width: 35%;
 }
+
 
 #gltfmodel {
     position: absolute;
@@ -327,6 +351,13 @@ body {
     width: 100%;
     height: 100vh;
     background-color:#ECECEC;
+    position: relative;
+}
+
+
+#s3-info {
+    width: 35%;
+    position: absolute;
 }
 
 #section4 {
@@ -335,13 +366,160 @@ body {
     position: relative;
 }
 
-#mapid { height:75%; 
-        width: 60%; 
-        background:beige; 
-        margin-lefT: 40%;}
+#s4-info {
+    margin-top: 4vh;
+    width: 30%;
+    position: absolute;
+}
+
+#inaturalist img {
+    width: 25%;
+    margin-top: 10%;
+    padding-left: 5%;
+    position: absolute;
+    bottom: 20%;
+}
+
+#mapid { 
+    position: absolute;
+    height: 77%; 
+    width: 60%; 
+    background:beige; 
+    right: 0%;;
+    bottom: 0%;}
 
 #googleChart {
-    height: 50%;
     position: absolute;
     right: 0%;
+    top: 7%;
 }
+
+#sourceNote{
+    position: absolute;
+    right: 8%;
+    width: 37%;
+    bottom: 10%;
+    color: #242424;
+    font-size: 1vw;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+#chartDetails {
+    width: 100%;
+}
+
+/*video player css*/
+
+@font-face {
+    font-family: 'HeydingsControlsRegular';
+    src: url('../fonts/heydings_controls-webfont.eot');
+    src: url('../fonts/heydings_controls-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/heydings_controls-webfont.woff') format('woff'),
+         url('../fonts/heydings_controls-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+video
+{
+	max-width: 100%;
+}
+
+#vidContainer
+{
+    position: absolute;
+    bottom: 9%;
+    height: 33vh;
+    width: 33vw;
+	display: flex;
+    padding-left: 5%;
+}
+
+.player
+{
+	position: relative;
+	overflow: hidden;
+}
+
+.controls
+{
+	visibility: hidden; /*hide our custom controls for now*/
+	opacity: 0.5;
+	width: 75%;
+	position: absolute;
+	bottom: 25px;
+	left: 12.5%;
+	box-shadow: 3px 3px 5px rgba(0,0,0,.5);
+	transition: 1s all;
+	display: flex; /*get all controls lined up*/
+}
+
+button, .controls {
+  background:rgba(36, 36, 36, 1);
+}
+
+.player:hover .controls, player:focus .controls
+{
+	opacity: 1;
+}
+
+button::before
+{
+	font-family: HeydingsControlsRegular;
+	font-size: 17px;
+	position: relative;
+	content: attr(data-icon);
+	/*this reads the attribute from data icon and sets it to that letter*/
+	color: #CCC;
+	text-shadow: 0px 0px 1px rgba(0,0,0,.5);
+}
+
+button, .timer
+{
+	height: 25px;
+}
+
+button
+{
+	border: 0;
+	outline: none;
+	padding-bottom: 8px;
+}
+
+
+.timer
+{
+	line-height: 25px;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-shadow: 0px 0px 1px rgba(0,0,0,.5);
+	color: white;
+	position: relative;
+	flex-grow: 1;
+}
+
+.timer div
+{
+	position: absolute;
+	background-color: rgba(154, 205, 50, 1);
+	left: 0;
+	top: 0;
+	width: 0px;
+	height: 25px;
+	z-index: 2;
+}
+
+.timer span
+{
+	position: absolute;
+	z-index: 3;
+	left: 20px;
+}
+
+button:active
+{
+	box-shadow: inset 2px 2px 2px rgba(0,0,0,.2);
+}
+
+

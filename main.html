@@ -27,24 +27,24 @@
 </div>
 
 <div id="menuIconDiv">
-  <div class="menuIcon" id="menuIcon1">
+ <a href="#section1" id="menuIcon1" class="menuIcon">
     <img src="images/information-icon.svg" alt="menuIcon">
-  </div>
-  <div class="menuIcon" id="menuIcon2">
+  </a> 
+  <a href="#section2" class="menuIcon" id="menuIcon2">
     <img src="images/eye-icon.svg" alt="menuIcon">
-  </div>
-  <div class="menuIcon" id="menuIcon3">
+  </a>
+  <a href="#section3" class="menuIcon" id="menuIcon3">
     <img src="images/scale-icon.svg" alt="menuIcon">
-  </div>
-  <div class="menuIcon" id="menuIcon4">
+  </a>
+  <a href="#section4" class="menuIcon" id="menuIcon4">
     <img src="images/map-icon.svg" alt="menuIcon">
-  </div>
+  </a>
 </div>
 </section>
 
 <section id="contentContainer">
   <section id="section1">
-    <h2 class="section-heading">The Ant-mimicking spider</h2>
+    <h2 class="section-heading" id="section-1-trigger">The Ant-mimicking spider</h2>
     <h3 class="sub-heading">Official European Spider of the Year 2019</h3>
     <p class="info-text" id="s1-info">Ant-mimicking spiders are spiders that take on the physical characteristics and movements of ants.  Ant-mimicking spiders use their two front legs to fake the appearance of antennas and
       mimic the zig-zag walking patterns of ants. 
@@ -65,8 +65,8 @@
   </section>
 
   <section id="section2">
-    <h2 class="section-heading">X-ray</h2>
-    <h3 class="sub-heading"></h3>
+    <h2 class="section-heading" id="section-2-trigger">X-ray & Anatomy</h2>
+    <h3 class="sub-heading">The body of a spider with the looks of an ant</h3>
     <div class="xraylabel-font" id="xraylabel1">Label one</div>
     <div class="xraylabel-font" id="xraylabel2">Label Two</div>
     <div id="outerShellCon">
@@ -74,7 +74,7 @@
       <div id="imageCon">
         <div class="slideImage image-right"></div> 
         <div class="slideImage image-left"></div>
-        <div class="slideImage image-drag"></div> 
+        <div class="slideImage image-drag"><p id="dragThis">Drag me</p></div> 
       </div>
     </div>
     </div>    
@@ -82,15 +82,58 @@
   </section>
 
   <section id="section3">
-    <h2 class="section-heading">The Best of Both Worlds</h2>
-    <h3 class="sub-heading"></h3>
+    <h2 class="section-heading">Walk this way</h2>
+    <h3 class="sub-heading" id="section-3-trigger">Imitation is the sincerest form of flattery</h3>
+    <p class="info-text" id="s3-info">If you aren't convinced that this spider looks like an ant, we have proof that they're doing something right! According to the data shown,
+      predators looking for food are much more likely to attack regular spiders and avoid the ant-mimicking spiders. 
+      <br>
+      <br>
+      Still not convinced? Check out this video of an ant-mimicking spider going about its day. You can really see how its
+      movements and walking patterns resemble an ants:
+    </p>
+
+    <div id="vidContainer">
+      <section class="player">
+        <h2 class="hidden">Video Player</h2>
+        <video controls >
+          <source src="assets/ant-mimick-spider.webm" type="video/webm">
+          <source src="assets/ant-mimick-spider.mp4" type="video/mp4">
+          <p>Oops. It's look like your browser does not support HTML5 video. <a href="assets/ant-mimick-spider.mp4">Download here</a></p>
+      </video>
+      <section class="controls">
+        <h2 class="hidden">Video Controls</h2>
+        <button class="play" data-icon="P" aria-label="play pause toggle"></button>
+        <button class="stop" data-icon="S" aria-label="stop"></button>
+        <div class="timer">
+          <div></div> <!-- will be timer bar that grows -->
+          <span aria-label="timer">00:00</span>
+        </div>
+        <button class="fullscreen" data-icon="M" aria-label="fullscreen"></button>
+      </section>
+      </section>
+    </div>
+  
+
     <div id="googleChart"></div>
+    <p id="sourceNote">Walking like an ant: a quantitative and experimental approach to understanding locomotor mimicry in the jumping spider Myrmarachne formicaria<br>
+      Paul S. Shamble, Ron R. Hoy, Itai Cohen, Tsevi Beatus<br>
+      Proc Biol Sci. 2017 Jul 12; 284(1858): 20170308. Published online 2017 Jul 12. doi: 10.1098/rspb.2017.0308
+    </p>
+
   </section>
 
   <section id="section4">
-    <h2 class="section-heading">Ant-mimicking spiders near you</h2>
+    <h2 class="section-heading" id="section-4-trigger">Ant-mimicking spiders near you</h2>
     <h3 class="sub-heading">Reported sightings of Ant-mimicking Spiders on iNaturalist.com</h3>
- 
+    <p class="info-text" id="s4-info">Ant-mimicking spiders can be find in many parts of the world, but lucky for us,
+      they are especially easy to find in the SouthWestern Ontario region. They can be found close to ant-colonies in the warmer
+      weather, and keeping warm and safe inside your homes during the winter cold.
+      <br>
+      <br>
+      If you find an Ant-mimicking spider, contribute your findings to iNaturalist.com and become
+      a part of important data observations! 
+    </p>
+    <a href="https://www.inaturalist.org/home" id="inaturalist"><img src="images/inaturalist.png" alt="inaturalist-logo"></a>
    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>
    
@@ -452,9 +495,6 @@
    };
    </script>
    
-   </head>
-   
-   <body>
    <div id="mapid"></div>
    <script>
    
@@ -611,6 +651,7 @@
   </section>
 
 </section>
+  <script src="js/videoPlayer.js"></script>
   <script src="js/googleChart.js"></script>
   <script src="js/gsap.min.js"></script>
   <script src="js/ScrollTrigger.min.js"></script>
