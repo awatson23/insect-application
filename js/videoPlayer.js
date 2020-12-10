@@ -1,6 +1,8 @@
 const media = document.querySelector('video');
 const controls = document.querySelector('.controls');
 
+media.muted = true; 
+
 const play = document.querySelector('.play');
 const stop = document.querySelector('.stop');
 const fullscreen = document.querySelector('.fullscreen');

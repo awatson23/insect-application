@@ -22,6 +22,7 @@
 <body>
   
 <section id="menuContainer">
+  <h2 class="hidden">Menu and Toolbar</h2>
 <div id="logoDiv">
   <a href="index.html"><img src="images/logo.svg" alt="menuIcon"></a>
 </div>
@@ -42,17 +43,23 @@
 </div>
 </section>
 
-<section id="contentContainer">
+<div id="contentContainer">
   <section id="section1">
-    <h2 class="section-heading" id="section-1-trigger">The Ant-mimicking spider</h2>
+    <h2 class="section-heading" id="section-1-trigger">The Ant-mimicking jumping spider</h2>
     <h3 class="sub-heading">Official European Spider of the Year 2019</h3>
     <p class="info-text" id="s1-info">Ant-mimicking spiders are spiders that take on the physical characteristics and movements of ants.  Ant-mimicking spiders use their two front legs to fake the appearance of antennas and
-      mimic the zig-zag walking patterns of ants. 
-      Surprisingly, predators are much less inclined
+      mimic the zig-zag walking patterns of ants.<br><br>
+      Predators are much less inclined
       to attack spiders as opposed to ants. This is because ants do not taste appealing to
       other mammals and insects. This also makes it easier for the spider to blend in with his
-      food source: ants! 30 of the 47,600 known species of spiders produce venom that is dangerous
-</p>
+      food source: ants (and other small insects)!<br><br>
+    </p>
+    <h4 id="afraidOfSpiders">Are you afraid of spiders?</h4>
+    <p class="info-text" id="s1-info">
+      Well, don't be!<br><br>
+      <strong>30</strong> of the 47,600 known species of spiders produce venom that is dangerous, and the Ant-mimicking spider is <strong>not</strong> one of them.<br><br>
+      Only an average of <strong>4</strong> people die a year from spider bites in the U.S.A. You are over <strong>10 times more likely to get struck by lightening</strong>! 
+    </p>
     <section class="spider-ar-image">
       <h2 class="hidden">Artifact Featured Content</h2>
       <model-viewer id="gltfmodel" src="images/spider-gltf-connected.gltf" alt="Lawson deer bone bead 3D model"
@@ -67,14 +74,16 @@
   <section id="section2">
     <h2 class="section-heading" id="section-2-trigger">X-ray & Anatomy</h2>
     <h3 class="sub-heading">The body of a spider with the looks of an ant</h3>
-    <div class="xraylabel-font" id="xraylabel1">Label one</div>
-    <div class="xraylabel-font" id="xraylabel2">Label Two</div>
+    <div class="xraylabel-font" id="xraylabel1"><Strong>Leg</Strong> (also pretend ant antennae)</div>
+    <div class="xraylabel-font" id="xraylabel2"><Strong>Chelicerae</Strong> (pinchers outside the mouth)</div>
+    <div class="xraylabel-font" id="xraylabel3"><Strong>Pedipalps</Strong> (used for shaping webs and sensing)</div>
+    <div class="xraylabel-font" id="xraylabel4"><Strong>Spinnerets</Strong> (for spinning webs)</div>
     <div id="outerShellCon">
     <div id="outerShell">
       <div id="imageCon">
         <div class="slideImage image-right"></div> 
         <div class="slideImage image-left"></div>
-        <div class="slideImage image-drag"><p id="dragThis">Drag me</p></div> 
+        <div class="slideImage image-drag"></div> 
       </div>
     </div>
     </div>    
@@ -124,14 +133,14 @@
 
   <section id="section4">
     <h2 class="section-heading" id="section-4-trigger">Ant-mimicking spiders near you</h2>
-    <h3 class="sub-heading">Reported sightings of Ant-mimicking Spiders on iNaturalist.com</h3>
+    <h3 class="sub-heading">Reported sightings of Ant-mimicking Spiders on <strong>iNaturalist.com</strong></h3>
     <p class="info-text" id="s4-info">Ant-mimicking spiders can be find in many parts of the world, but lucky for us,
-      they are especially easy to find in the SouthWestern Ontario region. They can be found close to ant-colonies in the warmer
+      they are especially easy to find in the South-Western Ontario region. They can be found close to ant-colonies in the warmer
       weather, and keeping warm and safe inside your homes during the winter cold.
       <br>
       <br>
-      If you find an Ant-mimicking spider, contribute your findings to iNaturalist.com and become
-      a part of important data observations! 
+      If you find an Ant-mimicking spider, contribute your findings to <strong>iNaturalist.com</strong> and take part in
+      important data observations of the natural world! 
     </p>
     <a href="https://www.inaturalist.org/home" id="inaturalist"><img src="images/inaturalist.png" alt="inaturalist-logo"></a>
    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
@@ -650,13 +659,13 @@
    </script>
   </section>
 
-</section>
+</div>
   <script src="js/videoPlayer.js"></script>
   <script src="js/googleChart.js"></script>
   <script src="js/gsap.min.js"></script>
   <script src="js/ScrollTrigger.min.js"></script>
   <script src="js/drag-reveal.js"></script>
-	<script src="js/main.js"></script>
+	<script src="js/scrollanimations.js"></script>
 </body>	
 
   

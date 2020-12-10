@@ -22,8 +22,6 @@ function onMove(event) {
   if(dragging===true) {
     var x = event.clientX - imageCon.getBoundingClientRect().left;
 
-	console.log(event.clientX);
-	console.log(imageCon.getBoundingClientRect().left);
 
     if(x < min) { 
       x = min;   
